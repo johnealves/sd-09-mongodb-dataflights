@@ -146,14 +146,16 @@ db.voos.count({
 use('dataFlights');
 
 db.voos.count({
-  natureza: "Internacional"
+  natureza: "Internacional",
 });
 
 // 17 - Retorne o total de voos em que o campo natureza possui o valor Doméstica.
 
 use('dataFlights');
 
-db.voos.count();
+db.voos.count({
+  natureza: "Doméstica",
+});
 
 // 18 - Retorne o vooId, mes e ano do primeiro voo com mais de 7000 passageiros pagos.
 
