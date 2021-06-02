@@ -1,3 +1,1 @@
-db.voos.deleteMany({ $and: [
-  { "nome.empresa": "AZUL" }, { litrosCombustivel: { $lt: 400 } }],
-});
+db.voos.deleteMany({ "empresa.nome": "AZUL", litrosCombustivel: { $lt: 400 } });
