@@ -1,4 +1,4 @@
-const empresa = "PASSAREDO";
+const empresa = "LATAM AIRLINES BRASIL";
 db.resumoVoos.insertOne(
   {
     empresa,
@@ -11,7 +11,9 @@ db.resumoVoos.insertOne(
   );
 
 db.resumoVoos.find(
-  { empresa: "PASSAREDO" },
+  {
+    empresa: "LATAM AIRLINES BRASIL",
+  },
   {
     _id: 0,
     empresa: 1,
