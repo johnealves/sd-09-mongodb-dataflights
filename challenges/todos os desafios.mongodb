@@ -55,7 +55,7 @@ db.voos.count({ ano: { $lt: 2017 } });
 
 use('dataFlights');
 
-db.voos.count({ ano: { $gte: 2016 } });
+db.voos.count({ ano: { $gt: 2016 } });
 
 // 9 - Retorne a quantidade de voos entre os anos de 2017 e 2018.
 
