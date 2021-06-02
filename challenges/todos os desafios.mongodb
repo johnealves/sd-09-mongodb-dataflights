@@ -67,7 +67,11 @@ db.voos.count({ ano: { $gte: 2017, $lte: 2018  } });
 
 use('dataFlights');
 
-db.voos.find();
+db.voos.find(
+  { 
+    empresa: { nome: "GOL" }
+  }
+).limit(10);
 
 // 11 - Retorne a quantidade de documentos em que o campo aeroportoDestino.pais não seja igual a ESTADOS UNIDOS.
 
