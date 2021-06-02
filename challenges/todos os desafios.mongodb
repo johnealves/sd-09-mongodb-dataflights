@@ -87,7 +87,11 @@ db.voos.find(
 
 use('dataFlights');
 
-db.voos.find();
+db.voos.count(
+  {
+    "aeroportoDestino.pais": { $ne: "ESTADOS UNIDOS"}
+  }
+);
 
 // 12 - Retorne a quantidade de documentos em que o campo aeroportoDestino.pais seja igual a BRASIL, ARGENTINA ou CHILE.
 
