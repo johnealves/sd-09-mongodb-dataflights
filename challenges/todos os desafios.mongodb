@@ -1,0 +1,113 @@
+// Requisitos do projeto.
+
+// 1 - Retorne a quantidade de documentos inseridos na coleção voos.
+
+use('dataFlights');
+
+db.voos.count();
+
+// 2 - Retorne os 10 primeiros documentos com voos da empresa AZUL.
+
+use('dataFlights');
+
+db.voos.find();
+
+// 3 - Retorne a quantidade de voos da empresa AZUL.
+
+use('dataFlights');
+
+db.voos.find();
+
+// 4 - Retorne a quantidade de voos da empresa GOL.
+
+use('dataFlights');
+
+db.voos.find();
+
+// 5 - Retorne o vooId do décimo ao décimo segundo documento da coleção voos.
+
+use('dataFlights');
+
+db.voos.find();
+
+// 6 - Retorne apenas os campos empresa.sigla, empresa.nome e passageiros do voo com o campo vooId igual a 756807.
+
+use('dataFlights');
+
+db.voos.find();
+
+// 7 - Retorne a quantidade de voos em que o ano seja menor do que 2017.
+
+use('dataFlights');
+
+db.voos.find();
+
+// 8 - Retorne a quantidade de voos em que o ano seja maior do que 2016.
+
+use('dataFlights');
+
+db.voos.find();
+
+// 9 - Retorne a quantidade de voos entre os anos de 2017 e 2018.
+
+use('dataFlights');
+
+db.voos.find();
+
+// 10 - Retorne apenas os 10 primeiros documentos com voos da empresa GOL do ano de 2017. Exiba apenas os campos vooId, empresa.nome, aeroportoOrigem.nome, aeroportoDestino.nome, mes e ano.
+
+use('dataFlights');
+
+db.voos.find();
+
+// 11 - Retorne a quantidade de documentos em que o campo aeroportoDestino.pais não seja igual a ESTADOS UNIDOS.
+
+use('dataFlights');
+
+db.voos.find();
+
+// 12 - Retorne a quantidade de documentos em que o campo aeroportoDestino.pais seja igual a BRASIL, ARGENTINA ou CHILE.
+
+use('dataFlights');
+
+db.voos.find();
+
+// 13 - Retorne a quantidade de documentos em que o campo aeroportoDestino.continente não seja igual a EUROPA, ÁSIA e OCEANIA.
+
+
+
+// 14 - Retorne o total de voos em que o país de origem não seja BRASIL.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
