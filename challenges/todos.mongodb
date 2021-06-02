@@ -1,0 +1,10 @@
+// Desafio 1
+use('dataFlights');
+
+db.voos.count();
+
+// Desafio 2
+use('dataFlights');
+
+db.voos.find();
+
