@@ -161,7 +161,10 @@ db.voos.count({
 
 use('dataFlights');
 
-db.voos.count();
+db.voos.findOne(
+  { passageiros: { $gt: 7000 } },
+  { vooId: 1, mes: 1, ano: 1, _id: 0 }
+);
 
 // 19 - Retorne o vooId do primeiro voo em que o campo litrosCombustivel exista.
 
