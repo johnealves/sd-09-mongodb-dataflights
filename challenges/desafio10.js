@@ -9,5 +9,5 @@ db.voos.find({
     "aeroportoDestino.nome": 1,
     mes: 1,
     ano: 1, 
-    id: 0,
+    _id: 0,
 });
