@@ -3,3 +3,8 @@ db.voos.count();
 
 use dataFlights
 db.voos.find({ nome : "AZUL" }).limit(10);
+
+use dataFlights
+db.voos.find({},{ nome : "AZUL" }).count();
+
+db.voos.find();
