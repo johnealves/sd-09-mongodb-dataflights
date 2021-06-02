@@ -1,1 +1,1 @@
-db.voos.countDocuments({ decolagens: { $gte: 20 } });
+db.voos.countDocuments({ decolagens: { $gt: 20 } });
