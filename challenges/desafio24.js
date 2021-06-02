@@ -1,6 +1,6 @@
 db.voos.find(
   {
-    litrosCombustivel: { $not: { $gt: 600 } },
+    litrosCombustivel: { $exists: 1, $not: { $gt: 600 } },
     $nor: [{ "empresa.nome": "GOL" }, { "empresa.nome": "AZUL" }],
   },
   {
