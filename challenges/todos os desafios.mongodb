@@ -125,8 +125,110 @@ db.voos.count(
 
 // 14 - Retorne o total de voos em que o país de origem não seja BRASIL.
 
+use('dataFlights');
+
+db.voos.count({
+  "aeroportoOrigem.pais": {
+    $ne: "BRASIL",
+  },
+});
+
+// 15 - Retorne o total de voos com mais de 20 decolagens.
+
+use('dataFlights');
+
+db.voos.count();
+
+// 16 - Retorne o total de voos em que o campo natureza possui o valor Internacional.
+
+use('dataFlights');
+
+db.voos.count();
+
+// 17 - Retorne o total de voos em que o campo natureza possui o valor Doméstica.
+
+use('dataFlights');
+
+db.voos.count();
+
+// 18 - Retorne o vooId, mes e ano do primeiro voo com mais de 7000 passageiros pagos.
+
+use('dataFlights');
+
+db.voos.count();
+
+// 19 - Retorne o vooId do primeiro voo em que o campo litrosCombustivel exista.
+
+use('dataFlights');
+
+db.voos.count();
+
+// 20 - Retorne o vooId do primeiro voo em que o campo rtk não exista.
+
+use('dataFlights');
+
+db.voos.count();
+
+// 21 - Retorne o vooId do primeiro voo em que o campo litrosCombustivel seja maior ou igual a 1000.
+
+use('dataFlights');
+
+db.voos.count();
+
+// 22 - Retorne o vooId do primeiro voo em que a empresa seja DELTA AIRLINES ou AMERICAN AIRLINES, a sigla do aeroporto de origem seja SBGR e a sigla do aeroporto de destino seja KJFK.
+
+use('dataFlights');
+
+db.voos.count();
+
+// 23 - Retorne o vooId e litrosCombustivel do primeiro voo em que o campo litrosCombustivel não seja maior do que 1000 e o campo litrosCombustivel exista.
+
+use('dataFlights');
+
+db.voos.count();
+
+// 24 - Retorne o vooId, empresa.nome e litrosCombustivel do primeiro voo em que litrosCombustivel não seja maior do que 600 e a empresa não seja GOL ou AZUL, e o campo litrosCombustivel exista.
+
+use('dataFlights');
+
+db.voos.count();
+
+// 25 - Remova todos os voos da empresa AZUL em que a quantidade de combustível seja menor do que 400. Informe a quantidade de documentos removidos.
+
+use('dataFlights');
+
+db.voos.count();
+
+// 26 - Remova todos os voos da empresa GOL em que a quantidade de passageiros pagos esteja entre 5 e 10, incluindo os casos em que a quantidade é 5 e 10. Informe a quantidade de documentos removidos.
+
+use('dataFlights');
+
+db.voos.count();
+
+// 27 - Retorne a quantidade total de voos de natureza Doméstica que a empresa PASSAREDO possui, via uso de uma nova coleção chamada resumoVoos.
 
 
+use('dataFlights');
+
+db.voos.count();
+
+// 28 - Retorne a quantidade total de voos de natureza Doméstica que a empresa LATAM AIRLINES BRASIL possui, via uso de uma nova coleção chamada resumoVoos.
+
+use('dataFlights');
+
+db.voos.count();
+
+// 
+
+use('dataFlights');
+
+db.voos.count();
+
+// 
+
+use('dataFlights');
+
+db.voos.count();
 
 
 
