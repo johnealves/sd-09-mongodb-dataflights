@@ -1,2 +1,1 @@
-// desafio1
-esse é o primeiro testes
+db.voos.count({});
