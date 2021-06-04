@@ -1,1 +1,1 @@
-db.voos.count({ $and: [{ ano: { $eq: 2016 } }, { ano: { $lte: 2017 } }] });
+db.voos.count({ $and: [{ ano: { $gte: 2017 } }, { ano: { $lte: 2018 } }] });
