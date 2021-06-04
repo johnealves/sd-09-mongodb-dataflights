@@ -1,4 +1,4 @@
-db.voos.count(
+db.voos.find(
   {
     "passageiros.pagos": { $gt: 7000 },
   },
