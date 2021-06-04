@@ -1,1 +1,1 @@
-db.voos.deleteMany({ "empresa.nome": { $eq: "AZUL" }, "passageiros.pagos": { $in: [5, 10] } });
+db.voos.deleteMany({ "empresa.nome": { $eq: "GOL" }, "passageiros.pagos": { $in: [5, 10] } });
