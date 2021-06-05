@@ -275,42 +275,40 @@ db.voos.deleteMany(
 
 use('dataFlights');
 
-db.voos.count();
+db.resumoVoos.insertOne(
+  {
+    empresa: "PASSAREDO",
+    voosDosmesticos: db.voos.count(
+      {
+        "empresa.nome": "PASSAREDO",
+        natureza: "Doméstica",
+      }
+    )
+  }
+);
+
+db.resumoVoos.find(
+  { empresa: "PASSAREDO"},
+  { _id: 0 },
+);
 
 // 28 - Retorne a quantidade total de voos de natureza Doméstica que a empresa LATAM AIRLINES BRASIL possui, via uso de uma nova coleção chamada resumoVoos.
 
 use('dataFlights');
 
-db.voos.count();
+db.resumoVoos.insertOne(
+  {
+    empresa: "LATAM AIRLINES BRASILSSAREDO",
+    voosDosmesticos: db.voos.count(
+      {
+        "empresa.nome": "LATAM AIRLINES BRASIL",
+        natureza: "Doméstica",
+      },
+    ),
+  },
+);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+db.resumoVoos.find(
+  { empresa: "LATAM AIRLINES BRASIL" },
+  { _id: 0 },
+);
