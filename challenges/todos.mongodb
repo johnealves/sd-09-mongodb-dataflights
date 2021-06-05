@@ -2,6 +2,11 @@
 use('dataFlights');
 db.voos.find({ ano: { $lt: 2017 }}).count();
 
+// requisito 8
+
+use('dataFlights');
+db.voos.find({ ano: { $gt: 2016 } }).count();
+
 // teste
 use('dataFlights');
 
