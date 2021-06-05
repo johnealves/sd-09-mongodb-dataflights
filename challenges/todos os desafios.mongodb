@@ -256,13 +256,19 @@ db.voos.findOne(
 
 use('dataFlights');
 
-db.voos.count();
+db.voos.deleteMany(
+  { "empresa.nome": "AZUL", litrosCombustivel: { $lt: 400 } }
+);
 
 // 26 - Remova todos os voos da empresa GOL em que a quantidade de passageiros pagos esteja entre 5 e 10, incluindo os casos em que a quantidade é 5 e 10. Informe a quantidade de documentos removidos.
 
 use('dataFlights');
 
-db.voos.count();
+db.voos.deleteMany(
+  {
+    "empresa.nome": "GOL", "passageiros.pagos": { $gte: 5,  $lte: 10 },
+  }
+);
 
 // 27 - Retorne a quantidade total de voos de natureza Doméstica que a empresa PASSAREDO possui, via uso de uma nova coleção chamada resumoVoos.
 
@@ -277,17 +283,6 @@ use('dataFlights');
 
 db.voos.count();
 
-// 
-
-use('dataFlights');
-
-db.voos.count();
-
-// 
-
-use('dataFlights');
-
-db.voos.count();
 
 
 
