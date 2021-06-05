@@ -230,7 +230,7 @@ db.voos.findOne(
       },
       {
         litrosCombustivel: { $exists: true },
-      }
+      },
     ],
   },
   {
@@ -244,7 +244,13 @@ db.voos.findOne(
 
 use('dataFlights');
 
-db.voos.count();
+db.voos.findOne(
+  { 
+    litrosCombustivel: { $lt: 600 },
+    "empresa.nome": { $nin: ["GOL", "AZUL"] },
+  },
+  { vooId: 1, "empresa.nome": 1, litrosCombustivel: 1, _id: 0 }
+);
 
 // 25 - Remova todos os voos da empresa AZUL em que a quantidade de combustível seja menor do que 400. Informe a quantidade de documentos removidos.
 
