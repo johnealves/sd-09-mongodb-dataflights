@@ -52,6 +52,10 @@ db.voos.findOne({ rtk: { $exists: false}}, { vooId: true, _id: 0});
 // requisito 21
 use('dataFlights');
 db.voos.findOne({ litrosCombustivel: { $gte: 1000 }}, { vooId: true, _id: 0});
+
+// requisito 22
+use('dataFlights');
+db.voos.findOne({  "empresa.nome": { $in: ["DELTA AIRLINES" ,"AMERICAN AIRLINES"]}, "aeroportoOrigem.sigla": "SBGR", "aeroportoDestino.sigla": "KJFK"}, { vooId: true, _id: 0});
 // teste
 
 // Desafio 1
