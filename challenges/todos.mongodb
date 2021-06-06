@@ -18,4 +18,14 @@ db.voos.count({ "aeroportoDestino.pais": { $in : ["BRASIL", "ARGENTINA", "CHILE"
 // requisito 13
 use('dataFlights');
 db.voos.count({ "aeroportoDestino.continente": { $nin : ["EUROPA", "ÁSIA", "OCEANIA"]}});
+
+// requisito 14
+
+use('dataFlights');
+db.voos.count({ "aeroportoOrigem.pais": { $ne : "BRASIL"}});
+
 // teste
+// Desafio 1
+use('dataFlights');
+
+db.voos.find();
