@@ -56,6 +56,13 @@ db.voos.findOne({ litrosCombustivel: { $gte: 1000 }}, { vooId: true, _id: 0});
 // requisito 22
 use('dataFlights');
 db.voos.findOne({  "empresa.nome": { $in: ["DELTA AIRLINES" ,"AMERICAN AIRLINES"]}, "aeroportoOrigem.sigla": "SBGR", "aeroportoDestino.sigla": "KJFK"}, { vooId: true, _id: 0});
+
+// requisito 23
+use('dataFlights');
+db.voos.findOne({ $and: [
+  { litrosCombustivel: { $lte: 1000}},
+  { litrosCombustivel: { $exists: true }}
+]}, { vooId: true, litrosCombustivel: true, _id: 0});
 // teste
 
 // Desafio 1
