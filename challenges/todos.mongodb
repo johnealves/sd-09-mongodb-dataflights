@@ -42,9 +42,13 @@ use('dataFlights');
 db.voos.findOne({ "passageiros.pagos": { $gt: 7000 }}, { _id: 0 , vooId: true,  mes: true, ano: true});
 
 // requisito 19
-
 use('dataFlights');
 db.voos.findOne({ litrosCombustivel: { $exists: true}}, { vooId: true, _id: 0});
+
+
+// requisito 20
+use('dataFlights');
+db.voos.findOne({ rtk: { $exists: false}}, { vooId: true, _id: 0});
 // teste
 
 // Desafio 1
