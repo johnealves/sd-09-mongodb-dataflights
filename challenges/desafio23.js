@@ -4,7 +4,8 @@ db.voos.findOne(
       [
         { $nor:
           [
-            { litrosCombustivel: { $gt: 1000 } },
+            { litrosCombustivel: { $gt: 600 } },
+            { }
           ],
         },
         {
