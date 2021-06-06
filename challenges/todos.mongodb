@@ -33,10 +33,13 @@ db.voos.count({ decolagens: { $gt : 20 }});
 use('dataFlights');
 db.voos.count({ natureza: "Internacional"});
 
-
 //requisito 17
 use('dataFlights');
 db.voos.count({ natureza: "Doméstica"});
+
+//requisito 18
+use('dataFlights');
+db.voos.findOne({ "passageiros.pagos": { $gt: 7000 }}, { _id: 0 , vooId: true,  mes: true, ano: true});
 // teste
 
 // Desafio 1
