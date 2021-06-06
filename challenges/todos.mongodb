@@ -32,7 +32,13 @@ db.voos.count({ decolagens: { $gt : 20 }});
 // requisito 16
 use('dataFlights');
 db.voos.count({ natureza: "Internacional"});
+
+
+//requisito 17
+use('dataFlights');
+db.voos.count({ natureza: "Doméstica"});
 // teste
+
 // Desafio 1
 use('dataFlights');
 
