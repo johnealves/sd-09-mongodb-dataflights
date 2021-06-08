@@ -1,1 +1,1 @@
-db.voos.find({"empresa.nome": { $eq: "GOL" }}).count();
+db.voos.find({ "empresa.nome": { $eq: "GOL" } }).count();
