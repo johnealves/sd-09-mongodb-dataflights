@@ -2,7 +2,7 @@ db.voos.find(
   {
     "empresa.nome": { $in: ["DELTA AIRLINES", "AMERICAN AIRLINES"] },
     "aeroportoOrigem.sigla": "SBGR",
-    "aeroportoDestino.sigla": "KFJK",
+    "aeroportoDestino.sigla": "KJFK",
   },
   {
     _id: false,
