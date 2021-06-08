@@ -7,4 +7,4 @@ const totalVoosDomesticos = db.voos.find(
 ).count();
 
 db.resumoVoos.insertOne({ empresa, totalVoosDomesticos });
-db.resumoVoos.findOne({ empresa });
+db.resumoVoos.findOne({ empresa }, { _id: false });
