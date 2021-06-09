@@ -1,9 +1,4 @@
-db.voos.find(
-  {
-    litrosCombustivel: { $gte: false },
-  },
-  {
-    vooId: 1,
-    _id: 0,
-  },
-).limit(1);
+db.voos.findOne(
+  { litrosCombustivel: { $gte: 1000 } },
+  { _id: 0, vooId: 1 },
+);
