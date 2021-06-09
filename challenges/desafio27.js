@@ -6,7 +6,7 @@ db.resumoVoos.insertOne({
   empresa: "PASSAREDO",
   totalVoosDomesticos: valorTotal,
 });
-db.resumoVoos.findOne(
+db.resumoVoos.find(
   {
     empresa: "PASSAREDO",
   },
@@ -15,4 +15,4 @@ db.resumoVoos.findOne(
     empresa: 1,
     totalVoosDomesticos: 1,
   },
-);
+).limit(1);
