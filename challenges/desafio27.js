@@ -6,8 +6,10 @@ const VOOS_DOMESTICOS_PASSAREDO = db.voos.count(
 );
 
 db.resumoVoos.insertOne(
-  { empresa: "PASSAREDO" },
-  { totalVoosDomesticos: VOOS_DOMESTICOS_PASSAREDO },
+  { 
+    empresa: "PASSAREDO",
+    totalVoosDomesticos: VOOS_DOMESTICOS_PASSAREDO,
+  },
 );
 
 db.resumoVoos.findOne(

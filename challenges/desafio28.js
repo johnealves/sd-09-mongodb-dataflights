@@ -7,8 +7,10 @@ const VOOS_DOMESTICOS_LATAM = db.voos.count(
 );
 
 db.resumoVoos.insertOne(
-  { empresa: LATAM },
-  { totalVoosDomesticos: VOOS_DOMESTICOS_LATAM },
+  {
+    empresa: LATAM,
+    totalVoosDomesticos: VOOS_DOMESTICOS_LATAM,
+  },
 );
 
 db.resumoVoos.findOne(
