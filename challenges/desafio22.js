@@ -1,5 +1,5 @@
 db.voos.find({
-    empresa: {
+    "empresa.nome": {
         $in: [
             "DELTA AIRLINES",
             "AMERICAN AIRLINES",
