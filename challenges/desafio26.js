@@ -1,4 +1,4 @@
 db.voos.deleteMany({
   "empresa.nome": "GOL",
-  qty: { $in: [5, 10] },
+  "passageiros.pagos": { $gte: 5, $lte: 10 },
 });
