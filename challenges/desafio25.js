@@ -1,0 +1,1 @@
+db.voos.deletemMany({ "empresa.name": "AZUL", litrosCombustivel: { $lt: 400 } });
